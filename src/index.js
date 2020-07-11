@@ -6,10 +6,10 @@ import { ContactProvider } from './Context/Context.js';
 
 
 ReactDOM.render(
-<ContactProvider>
-<React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ContactProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
 </ContactProvider>,
   document.getElementById('root')
 );

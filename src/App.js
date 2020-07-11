@@ -4,7 +4,7 @@ import Preloader from './components/Utils/Preloader/Preloader';
 
 
 function App() {
-  return <Rute/>
+  return <Rute />
 }
 
 export default App;
