@@ -1,21 +1,19 @@
 /*Contacts.js*/
-const clone=require('clone');
 const db={};
 
-export const defaultData={
-    contacts:[
-        {
-            id:genID(),
-            name:'Ali',
-            surname:'GreenHeart',
-            createdDate:new Date(),
-            modifiedDate:new Date(),
-            homeNum:'0123456789',
-            workNum:'0704930781',
+ const Contacts=[
+    {
+        id:1,
+        name:'Ali',
+        surname:'GreenHeart',
+        createdDate:new Date(),
+        modifiedDate:new Date(),
+        homeNum:'0123456789',
+        workNum:'0704930781',
             mobileNum:'0702567891',
         },
         {
-            id:genID(),
+            id:2,
             name:'AliReza',
             surname:'RedHeart',
             createdDate:new Date(),
@@ -25,7 +23,7 @@ export const defaultData={
             mobileNum:'0702346579',
         },
         {
-            id:genID(),
+            id:3,
             name:'Foo',
             surname:'SweetieHeart',
             createdDate:new Date(),
@@ -34,37 +32,6 @@ export const defaultData={
             workNum:'7890654321',
             mobileNum:'0864124680',
         },
-    ]
-}
+]
 
-/* get contacts */
- const get=(token)=>{
-    let data=db[token]
-
-    if(!data){
-        data=db[token]=clone(defaultData);
-    }
-    return data;
-}
-
-/* add contact */
-import genID from "./genID";
- const add=(token,contact)=>{
-    if(!contact.id) contact.id=genID();
-    get(token).contacts.push(contact)
-    return contact;
-}
-
-/* remove contact */
-const remove=(token,id)=>{
-    const data=get(token)
-    const contact=data.contacts.find(c=>c.id===id)
-
-    if(contact) data.contacts=data.contacts.filter(c=>c !==contact)
-    return {contact}; //we exported with spread operator.
-}
-module.exports={
-    get,
-    add,
-    remove
-}
+export default Contacts;
