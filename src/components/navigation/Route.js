@@ -3,6 +3,7 @@ import { Route, Link, BrowserRouter as Router, Switch} from 'react-router-dom'
 import Contacts from "../Screens/Contacts/Contacts";
 import Home from "../Screens/Home/Home";
 import NotFound from './NotFound/NotFound' 
+import Contact from "../Screens/Contact/Contact";
 import './Route.css'
 import HomeIcon from '@material-ui/icons/Home';
 import PermContactCalendarRoundedIcon from '@material-ui/icons/PermContactCalendarRounded';
@@ -18,9 +19,14 @@ import PermContactCalendarRoundedIcon from '@material-ui/icons/PermContactCalend
         <li>
     <Link to="/contacts">{<div><PermContactCalendarRoundedIcon /></div>}Contacts</Link>
         </li>
+        <li>
+    <Link to="/details"></Link>
+        </li>
       </ul>
       <Switch>
       <Route exact path="/" component={Home} />
+      <Route path='/details' component={Contact}/>
+      <Route  path="/details/:contactID" component={Contact} />
       <Route path="/contacts" component={Contacts} />
       <Route component={NotFound} />
       </Switch>

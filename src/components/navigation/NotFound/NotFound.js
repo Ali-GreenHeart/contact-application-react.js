@@ -1,16 +1,17 @@
 import React from "react";
 import './NotFound.css'
 import { useHistory } from "react-router-dom";
+import SelectInput from "@material-ui/core/Select/SelectInput";
 
 // there was an error : Cannot read property 'getContext' of null, using canvas. I solved it, with writing code after <canvas></canvas> tag. 
 export default function NotFound(){
 	
-		const history = useHistory();
-		const navigateTo = () => history.push('/');
+
+
+
     return(
-        
-    <div class="content"><canvas class="snow" id="snow"></canvas>
-	{
+		<div class="content"><canvas class="snow" id="snow"></canvas>
+		{
 		/* snow show. I wrote it after canvas to hinder(mane olmaq) to throw an error. (it gave a getContext error) */
 (function() {
 	function ready(fn) {
@@ -20,7 +21,8 @@ export default function NotFound(){
 			document.addEventListener('DOMContentLoaded', fn);
 		}
 	}
-	
+
+
 	function makeSnow(el) {
 			var ctx = el.getContext('2d');
 			console.log(ctx);

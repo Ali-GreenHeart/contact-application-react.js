@@ -1,5 +1,1 @@
-.cardContainer{
-    width: fit-content;
-    display: flex;
-    flex-wrap: wrap;
- }
+.cardContainer{width: fit-content;display: flex;flex-wrap: wrap;}

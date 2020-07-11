@@ -1,9 +1,10 @@
 import React from "react";
 import './ContactCard.css';
+import ContactConsumer from "../../../Context/Context";
 
-export default function ContactCard({ id, name, surname, mobileNum }) {
+export default function ContactCard({ id, name, surname, mobileNum,onClick }) {
     return (
-        <div className="grid">
+        <div className="grid" onClick={onClick}>
             <div className="signature">
                 <div className="icon-container">{id}</div>
                 <div className="textContainer">
