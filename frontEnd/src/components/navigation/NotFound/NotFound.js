@@ -1,7 +1,5 @@
 import React from "react";
 import './NotFound.css'
-import { useHistory } from "react-router-dom";
-import SelectInput from "@material-ui/core/Select/SelectInput";
 
 // there was an error : Cannot read property 'getContext' of null, using canvas. I solved it, with writing code after <canvas></canvas> tag. 
 export default function NotFound() {

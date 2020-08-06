@@ -19,13 +19,9 @@ function Rute() {
           <li>
             <Link to="/contacts">{<div><PermContactCalendarRoundedIcon /></div>}Contacts</Link>
           </li>
-          <li>
-            <Link to="/details"></Link>
-          </li>
         </ul>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path='/details' component={Contact} />
           <Route path="/details/:contactID" component={Contact} />
           <Route path="/contacts" component={Contacts} />
           <Route component={NotFound} />

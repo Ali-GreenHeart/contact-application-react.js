@@ -1,5 +1,80 @@
-/* 
-ToDO:
-add styles )))
+.container{
+    margin: 0 auto;
+    background-color: aqua;
+    height: 100vh;
+}
+.id{
+    margin: 0 10rem;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    background-color: gray;
+    color: lime;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 100%;
+}
+.contactContainer{
+   text-align: center;
+   margin: 0 auto;
+}
+.name{
 
-*/
+}
+.name::before{
+    content: "name: ";
+}
+.surname::before{
+    content: "surname: ";
+    
+}
+.createdDate::before{
+    content: "created date: ";
+    
+}
+.modifiedDate::before{
+    content: "modified Date: ";
+    
+}
+.homeNum::before{
+    content: "home number: ";
+    
+}
+.workNum::before{
+    content: "work number: ";
+
+}
+.mobileNum::before{
+    content: "mobile number: ";
+}
+
+.errorMessageContainer{
+    background-color: aqua;
+    text-align: center;
+}
+.errorMessageContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contactsButton{
+    text-decoration: none;
+    border: 2px solid black;
+    width: 100px;
+    margin-top: 100px;
+    background-color: cornflowerblue;
+    color: rgba(10, 10, 55, .9);
+    padding: 10px 20px;
+}
+
+.tabsContainer{
+    display: flex;
+    justify-content: space-around;
+}
+.deleteIcon{
+    margin-top: 20px;
+    transform: scale(3);
+    cursor: pointer;
+}

@@ -9,7 +9,7 @@ ReactDOM.render(
   <ContactProvider>
     <React.StrictMode>
       <App />
-    </React.StrictMode>,
+    </React.StrictMode>
 </ContactProvider>,
   document.getElementById('root')
 );

@@ -1,33 +1,67 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState } from 'react';
 import PropTypes from "prop-types";
 import './Contact.css'
-import { Link } from 'react-router-dom';
 import ContactConsumer from '../../../Context/Context';
+import { Link } from 'react-router-dom'
+import DeleteForever from '@material-ui/icons/DeleteForever';
+
 
 export default function Contact() {
+  const initialState={
+    id:'',
+    name:'',
+    surname:'',
+    createdDate:'',
+    modifiedDate:'',
+    workNum:'',
+    homeNum:'',
+    mobileNum:'',
+    mobileNum:'',
+  }
+  const [data, setData] = useState({});
+  console.log(`data:`,data)
+  const deleteContact=()=>{
+    setData({...initialState});
+  }
+  
   return (
     <>
-      <h1>I do some stuffs but, i couldn't do that. </h1>
-      <h1>I should try later</h1>
-      <h2>TODO: context api structure apply to details page </h2>
       <ContactConsumer >
         {
           value => {
-            const { id, name, surname, createdDate, modifiedDate, mobileNum, homeNum, workNum } = value.detData;
-            { console.log('a') }
-            { console.log(value.detData) }
-            return (
-              <>
-                <h1>{id}</h1>
-                <h1>{name}</h1>
-                <h1>{surname}</h1>
-                <h2>{createdDate}</h2>
-                <h2>{modifiedDate}</h2>
-                <h1>{homeNum}</h1>
-                <h1>{workNum}</h1>
-                <h1>{mobileNum}</h1>
-              </>
+            setData(value.detData)
+            if(data===null||data===undefined) return <h1>{`data is ${data}`}</h1>
+            else{
+              const { id, name, surname, createdDate, modifiedDate, mobileNum, homeNum, workNum } = data;
+              console.log(data);
+              return (
+                <div className="container">
+                {
+                  id === undefined ?
+                  <div className="errorMessageContainer">
+                      <h1>Please, go the contacts page</h1>
+                      <Link className='contactsButton' to='/contacts'>Contacts</Link>
+                    </div>
+                    :
+                    <div>
+                      <div className="tabsContainer">
+                        <h1 className="id">{id}</h1>
+                        <DeleteForever onClick={deleteContact} className="deleteIcon"/>
+                      </div>
+                      <div className="contactContainer">
+                        <h1 className="name">{name}</h1>
+                        <h1 className="surname">{surname}</h1>
+                        <h2 className="createdDate">{createdDate}</h2>
+                        <h2 className="modifiedDate">{modifiedDate}</h2>
+                        <h1 className="homeNum">{homeNum}</h1>
+                        <h1 className="workNum">{workNum}</h1>
+                        <h1 className="mobileNum">{mobileNum}</h1>
+                      </div>
+                    </div>
+                }
+              </div>
             )
+          }
 
           }
         }
