@@ -49,13 +49,13 @@ export default function Contact() {
                         <DeleteForever onClick={deleteContact} className="deleteIcon"/>
                       </div>
                       <div className="contactContainer">
-                        <h1 className="name">{name}</h1>
-                        <h1 className="surname">{surname}</h1>
-                        <h2 className="createdDate">{createdDate}</h2>
-                        <h2 className="modifiedDate">{modifiedDate}</h2>
-                        <h1 className="homeNum">{homeNum}</h1>
-                        <h1 className="workNum">{workNum}</h1>
-                        <h1 className="mobileNum">{mobileNum}</h1>
+                        <h1 className="contactName">{name}</h1>
+                        <h1 className="contactSurname">{surname}</h1>
+                        <h2 className="contactCreatedDate">{createdDate.toString().slice(0,10)}</h2>
+                        <h2 className="contactModifiedDate">{modifiedDate.toString().slice(0,10)}</h2>
+                        <h1 className="contactHomeNum">{homeNum}</h1>
+                        <h1 className="contactWorkNum">{workNum}</h1>
+                        <h1 className="contactMobileNum">{mobileNum}</h1>
                       </div>
                     </div>
                 }

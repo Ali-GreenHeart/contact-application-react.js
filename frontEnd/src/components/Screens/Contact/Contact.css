@@ -19,33 +19,30 @@
    text-align: center;
    margin: 0 auto;
 }
-.name{
-
+.contactName::before{
+content:"name: "
 }
-.name::before{
-    content: "name: ";
-}
-.surname::before{
+.contactSurname::before{
     content: "surname: ";
     
 }
-.createdDate::before{
+.contactCreatedDate::before{
     content: "created date: ";
     
 }
-.modifiedDate::before{
+.contactModifiedDate::before{
     content: "modified Date: ";
     
 }
-.homeNum::before{
+.contactHomeNum::before{
     content: "home number: ";
     
 }
-.workNum::before{
+.contactWorkNum::before{
     content: "work number: ";
 
 }
-.mobileNum::before{
+.contactMobileNum::before{
     content: "mobile number: ";
 }
 

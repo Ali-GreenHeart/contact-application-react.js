@@ -9,6 +9,6 @@ clone and just type: npm install && npm start
 you should open front on port 3000 and nest.js stuffs on 3002. 
 
 soon:
-1. details page
++1. details page (done)
 2.  edit, delete on details page
 3. other stuffs ( which not in my head yet )
