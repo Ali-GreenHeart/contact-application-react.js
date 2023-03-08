@@ -23,7 +23,7 @@
   "dependencies": {
     "-": "0.0.1",
     "@nestjs/common": "^7.0.0",
-    "@nestjs/core": "^7.0.0",
+    "@nestjs/core": "^9.0.5",
     "@nestjs/platform-express": "^7.0.0",
     "@nestjs/typeorm": "^7.1.0",
     "pg": "^8.3.0",
